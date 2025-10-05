@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Design System for luqhfzi.com */
+
+@layer base {
+  :root {
+    /* Brand Colors - Professional blue-based palette */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Primary - Professional blue */
+    --primary: 214 88% 27%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 214 88% 35%;
+    --primary-dark: 214 88% 20%;
+    
+    /* Secondary - Warm gray */
+    --secondary: 210 11% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Accent - Vibrant blue */
+    --accent: 208 100% 47%;
+    --accent-foreground: 0 0% 98%;
+    
+    /* Neutral grays */
+    --muted: 210 11% 96%;
+    --muted-foreground: 215 13% 52%;
+    --muted-dark: 217 19% 89%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 217 19% 89%;
+    --input: 217 19% 89%;
+    --ring: 214 88% 27%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    
+    --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
+    --shadow-large: 0 25px 50px -12px hsl(var(--primary) / 0.25);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 32% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 217 32% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 208 100% 47%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 32% 18%;
+    --input: 217 32% 18%;
+    --ring: 214 88% 27%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .soft-shadow {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .medium-shadow {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .large-shadow {
+    box-shadow: var(--shadow-large);
+  }
+  
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+}
